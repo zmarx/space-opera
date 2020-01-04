@@ -81,4 +81,9 @@ public class ShipController : MonoBehaviour
         _positionOffset = Hand1.position - Stage.Min;
         _positionOffset.z += 0.5f * (Stage.Max.z - Stage.Min.z);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("TODO remove weapon or decrease live");
+    }
 }

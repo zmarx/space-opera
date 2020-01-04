@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour
 {
-	public float Speed;
-	public float TimeToLive;
+    public float Speed;
+    public float TimeToLive;
 
-	void Update()
+    void Update()
     {
-		TimeToLive -= Time.deltaTime;
-		transform.Translate(Speed * Time.deltaTime, 0, 0);
+        TimeToLive -= Time.deltaTime;
+        transform.Translate(Speed * Time.deltaTime, 0, 0);
 
-		if (TimeToLive < 0f)
-		{
-			Destroy(gameObject);
-		}
+        if (TimeToLive < 0f)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
     }
 }
