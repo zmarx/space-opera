@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
+    public float DelayAnimation = 0f;
 	private Shootable _shootable;
 	private Animator _animator;
 
@@ -12,9 +13,16 @@ public class Enemy : MonoBehaviour
 		_shootable._onShot.AddListener(OnShot);
 
 		_animator = GetComponent<Animator>();
+        _animator.enabled = false;
+        Invoke("DelayAnimationCR", DelayAnimation);
 	}
 
-	private void OnShot()
+    private void DelayAnimationCR()
+    {
+        _animator.enabled = true;
+    }
+
+    private void OnShot()
 	{
 		_animator.SetTrigger("Die");
 	}
