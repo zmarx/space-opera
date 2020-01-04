@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: 88c18c2080074d043b7f5c2fc4957730
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6710968875337978977
+    second: Background Sand_0
+  - first:
+      213: 5580585827948294130
+    second: Background Sand_1
+  - first:
+      213: -1769507168376096898
+    second: Background Sand_2
+  - first:
+      213: 7516916690097634038
+    second: Background Sand_3
+  - first:
+      213: -7826641855277025816
+    second: Background Sand_4
+  - first:
+      213: 6683939789620347631
+    second: Background Sand_5
+  - first:
+      213: 2351496437085244742
+    second: Background Sand_6
+  - first:
+      213: 6991303935675155473
+    second: Background Sand_7
+  - first:
+      213: 8159166888164137051
+    second: Background Sand_8
+  - first:
+      213: -476794953296923806
+    second: Background Sand_9
+  - first:
+      213: -7571377584952804715
+    second: Background Sand_10
+  - first:
+      213: 7491969232699813184
+    second: Background Sand_11
+  - first:
+      213: -2902302448128929614
+    second: Background Sand_12
+  - first:
+      213: 2929079944477412604
+    second: Background Sand_13
+  - first:
+      213: 7352721017348485839
+    second: Background Sand_14
+  - first:
+      213: -856412194139957034
+    second: Background Sand_15
+  - first:
+      213: 7844911507220385497
+    second: Background Sand_16
+  - first:
+      213: 1218069809721055260
+    second: Background Sand_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 11
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 4000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Background Sand_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2282
+        width: 1217
+        height: 454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8c17754f250484788275573b1ba0aa
+      internalID: 6710968875337978977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_1
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 2373
+        width: 598
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ca9375ed422144bafb5aa178730fa7
+      internalID: 5580585827948294130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_2
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 2373
+        width: 592
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c91b2536ef0adc44b61d2cc34cefa83
+      internalID: -1769507168376096898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_3
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 2327
+        width: 697
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb375868267e264bb3b468a0cdb6fa6
+      internalID: 7516916690097634038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_4
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 2437
+        width: 934
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d98f35db2ceb6499ac4c010dd2c924
+      internalID: -7826641855277025816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1917
+        width: 1011
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffc91848aada6a48abd23c9918d5f60
+      internalID: 6683939789620347631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_6
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 1954
+        width: 492
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9354eea085ea05f4aa0e48e9e27e1f7f
+      internalID: 2351496437085244742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_7
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 1967
+        width: 183
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e343da1e730e043a7faa03528bfd71
+      internalID: 6991303935675155473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_8
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 1949
+        width: 274
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58c804c480bee04eb04e96991d4cdc3
+      internalID: 8159166888164137051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_9
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 1967
+        width: 306
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf2e5e2f794ccf4392300c52f5c5b41
+      internalID: -476794953296923806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_10
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1958
+        width: 401
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af38ee66a6d6024e971766340237ed1
+      internalID: -7571377584952804715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_11
+      rect:
+        serializedVersion: 2
+        x: 3517
+        y: 1949
+        width: 356
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fa42d65dee8284994f152a26179a8f
+      internalID: 7491969232699813184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_12
+      rect:
+        serializedVersion: 2
+        x: 3987
+        y: 1949
+        width: 269
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7cebfe8cf2001f4c8eedbb2f6627116
+      internalID: -2902302448128929614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_13
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1584
+        width: 420
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef6b9554a3c0ad4683f43637ae81c03
+      internalID: 2929079944477412604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_14
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1594
+        width: 487
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5666382f662b69b4495d10b0ba63f59a
+      internalID: 7352721017348485839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_15
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 1584
+        width: 256
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daeac1ae6c7440042ac4d67fde2caf66
+      internalID: -856412194139957034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_16
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 1575
+        width: 265
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af578637e43f564d839a114ade0d406
+      internalID: 7844911507220385497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background Sand_17
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 459
+        width: 3445
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e217992f8c75c14f987dc3788efcb63
+      internalID: 1218069809721055260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
