@@ -1,44 +1,84 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using ValveIA = Valve.VR.InteractionSystem;
 
 public class ShipController : MonoBehaviour
 {
-	public Transform Hand1;
-	public Transform Hand2;
-	public Stage Stage;
-	public GameObject Shot;
+    public Transform Hand1;
+    public Transform Hand2;
+    public Stage Stage;
+    public GameObject Shot;
+    public float TimeToFire = 0.1f;
 
-	private ValveIA.Hand _valveHand;
-	private Vector3 _positionOffset;
+    private ValveIA.Hand _valveHand;
+    private Vector3 _positionOffset;
+    private float _timeToFire = 0f;
 
-	public void Start()
-	{
-		_valveHand = Hand1.GetComponent<ValveIA.Hand>();
-	}
-
-	// Update is called once per frame
-	void LateUpdate()
+    public void Start()
     {
-        if (_valveHand .controller == null) return;
+        _valveHand = Hand1.GetComponent<ValveIA.Hand>();
+    }
 
-        // Change the ButtonMask to access other inputs
-        if (_valveHand .controller.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad))
-        {
-			Debug.Log("Reset offset");
-			_positionOffset = Hand1.position - Stage.Min;
-        }
-        if (_valveHand .controller.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
-        {
-			GameObject shot = Instantiate(Shot);
-			shot.transform.position = transform.position + Shot.transform.localPosition;
-			shot.SetActive(true);
-        }
-		Vector3 p = Hand1.position - _positionOffset;
-		Stage.Clamp(ref p);
-		p.z = Mathf.Floor(p.z * 10f) * 0.1f;
+    // Update is called once per frame
+    void LateUpdate()
+    {
+        _timeToFire -= Time.deltaTime;
 
-		transform.position = p;
+        if (_valveHand.controller != null)
+        {
+            // Change the ButtonMask to access other inputs
+            if (_valveHand.controller.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad))
+            {
+                ResetOffset();
+            }
+            if (_valveHand.controller.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
+            {
+                Shoot();
+            }
+        }
+        if (Input.GetButton("Reset"))
+        {
+            ResetOffset();
+        }
+        if (Input.GetAxis("Fire") > 0.2f)
+        {
+            Shoot();
+        }
+
+        Vector3 dp;
+        dp.x = Input.GetAxis("Horizontal");
+        dp.y = Input.GetAxis("Vertical");
+        dp.z = Input.GetAxis("Depth");
+
+        Hand1.Translate(dp * Time.deltaTime);
+
+        Vector3 p = Hand1.position - _positionOffset;
+        Stage.Clamp(ref p);
+
+        // clamp hand position for desktop testing, so we don't exceed the staging bounds
+        // otherwise joystick inputs would feel awkward to wait for the position to come in stage range again.
+        Hand1.position = p + _positionOffset;
+
+        // set position on a defined lane
+        p.z = Mathf.Floor(p.z * 10f) * 0.1f;
+
+        transform.position = p;
+    }
+
+    private void Shoot()
+    {
+        if (_timeToFire <= 0f)
+        {
+            _timeToFire = TimeToFire;
+            GameObject shot = Instantiate(Shot);
+            shot.transform.position = transform.position + Shot.transform.localPosition;
+            shot.SetActive(true);
+        }
+    }
+
+    private void ResetOffset()
+    {
+        Debug.Log("Reset offset");
+        _positionOffset = Hand1.position - Stage.Min;
+        _positionOffset.z += 0.5f * (Stage.Max.z - Stage.Min.z);
     }
 }
