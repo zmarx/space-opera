@@ -1329,6 +1329,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 1
   TimeToLive: 5
+  LayerDestroy:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!54 &1809576204
 Rigidbody:
   m_ObjectHideFlags: 0

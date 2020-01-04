@@ -6,6 +6,7 @@ public class Shot : MonoBehaviour
 {
     public float Speed;
     public float TimeToLive;
+    public LayerMask LayerDestroy;
 
     void Update()
     {
@@ -20,6 +21,12 @@ public class Shot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // destroy shot if it hits an obstacle
         Destroy(gameObject);
+        // if shot hits a object within the layer mask destroy the object
+        if (((1 << other.gameObject.layer) & LayerDestroy) != 0)
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

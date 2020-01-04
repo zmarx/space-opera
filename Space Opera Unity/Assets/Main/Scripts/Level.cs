@@ -9,6 +9,9 @@ public class Level : MonoBehaviour
     private float _velocity = 0f;
     private float _restoreTargetSpeed = 0f;
 
+    /// <summary>
+    /// smooth stop scrolling
+    /// </summary>
     public void PauseScrolling()
     {
         if (TargetSpeed != 0f)
@@ -18,6 +21,10 @@ public class Level : MonoBehaviour
         TargetSpeed = 0f;
     }
 
+    /// <summary>
+    /// resume scrolling after a certain task is fullfilled.
+    /// e.g. call if a boss was killed
+    /// </summary>
     public void ResumeScrolling()
     {
         if (_restoreTargetSpeed != 0f)
