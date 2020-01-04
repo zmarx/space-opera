@@ -23,10 +23,16 @@ public class Shot : MonoBehaviour
     {
         // destroy shot if it hits an obstacle
         Destroy(gameObject);
+
         // if shot hits a object within the layer mask destroy the object
         if (((1 << other.gameObject.layer) & LayerDestroy) != 0)
         {
-            Destroy(other.gameObject);
+			Shootable shootable = other.GetComponent<Shootable>();
+			if (shootable!=null)
+			{
+				shootable.GetShot();
+			}
+            //Destroy(other.gameObject);
         }
     }
 }

@@ -130,6 +130,8 @@ GameObject:
   m_Component:
   - component: {fileID: 342886327}
   - component: {fileID: 342886326}
+  - component: {fileID: 342886328}
+  - component: {fileID: 342886329}
   m_Layer: 0
   m_Name: Enemy_2
   m_TagString: Untagged
@@ -172,6 +174,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &342886328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342886325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409d2838150ec4c47971472c41272192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &342886329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342886325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68930d013bbd6e49a7194ec3f2b0043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onShot:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &376461971
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +632,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1516744458}
   - component: {fileID: 1516744459}
+  - component: {fileID: 1516744460}
+  - component: {fileID: 1516744461}
   m_Layer: 0
   m_Name: Enemy_1
   m_TagString: Untagged
@@ -645,6 +676,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1516744460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516744457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409d2838150ec4c47971472c41272192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1516744461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516744457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68930d013bbd6e49a7194ec3f2b0043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onShot:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1911070538
 GameObject:
   m_ObjectHideFlags: 0

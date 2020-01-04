@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CoreGameState : GameState
 {
@@ -13,6 +14,7 @@ public class CoreGameState : GameState
 
 	public void Reset ()
 	{
+		SceneManager.LoadScene("level1", LoadSceneMode.Additive);
 	}
 
 	public void OnLevelDone ()
