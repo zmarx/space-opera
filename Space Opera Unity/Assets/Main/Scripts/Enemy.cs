@@ -27,4 +27,10 @@ public class Enemy : MonoBehaviour
 		_animator.SetTrigger("Die");
 	}
 
+    private void LateUpdate()
+    {
+        Vector3 p = transform.localPosition;
+        p.z = Stage.CropToLane(p.z);
+        transform.localPosition = p;
+    }
 }

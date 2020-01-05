@@ -54,14 +54,16 @@ public class ShipController : MonoBehaviour
         Vector3 p = Hand1.position - _positionOffset;
         Stage.Clamp(ref p);
 
+#if UNITY_EDITOR
         // clamp hand position for desktop testing, so we don't exceed the staging bounds
         // otherwise joystick inputs would feel awkward to wait for the position to come in stage range again.
         Hand1.position = p + _positionOffset;
+#endif
 
         // set position on a defined lane
-        p.z = Mathf.Floor(p.z * 10f) * 0.1f;
+        p.z = Stage.CropToLane(p.z);
 
-        transform.position = p;
+        transform.localPosition = p;
     }
 
     private void Shoot()
