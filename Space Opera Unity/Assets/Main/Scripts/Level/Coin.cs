@@ -9,6 +9,7 @@ public class Coin : MonoBehaviour
 	public void Collect()
 	{
 		Destroy(gameObject);
+		AudioMan.Instance.PlaySound("CoinCollect");
 		Player.Instance.Score += Value;
 	}
 }

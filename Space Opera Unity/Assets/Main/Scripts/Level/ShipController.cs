@@ -75,6 +75,7 @@ public class ShipController : MonoBehaviour
 			Shot shot = Instantiate(Shot);
 			shot.transform.position = transform.position + Shot.transform.localPosition;
 			shot.gameObject.SetActive(true);
+			AudioMan.Instance.PlaySound("PlayerShot");
 		}
 	}
 
