@@ -90,6 +90,9 @@ public class ShipController : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
+        // ignore built-in layer
+        if (other.gameObject.layer < 8) { return; }
+
 		Coin coin = other.gameObject.GetComponentInChildren<Coin>();
 		if (coin != null)
 		{
