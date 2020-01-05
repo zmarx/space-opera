@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
-	private void OnShot(Collider collider)
+	private void OnShot()
 	{
 		if (!_isAlive) return;
 		AudioMan.Instance.PlaySound("EnemyHit");
