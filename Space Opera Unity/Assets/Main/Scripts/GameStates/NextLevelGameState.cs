@@ -8,7 +8,7 @@ public class NextLevelGameState : GameState
 
 	public override void OnEnableGameState ()
 	{
-		Reset ();
+		StartCoroutine(Reset());
 	}
 
 	public IEnumerator Reset ()

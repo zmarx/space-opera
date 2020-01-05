@@ -16,7 +16,6 @@ public class StartMenuGameState : GameState
 		foreach (string level in Progress.Instance.LevelScenes)
 		{
 			Scene loadedLevel = SceneManager.GetSceneByName(level);
-
 			if (loadedLevel.isLoaded)
 			{
 				SceneManager.UnloadSceneAsync(loadedLevel, UnloadSceneOptions.None);
