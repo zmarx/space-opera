@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4476042482427172986}
   - component: {fileID: 4476042482427172985}
   - component: {fileID: 4476042482427172990}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: EnemyShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4476042483033235445}
   - component: {fileID: 4476042483033235444}
   - component: {fileID: 4476042483033235447}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShotSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
