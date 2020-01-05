@@ -9,6 +9,7 @@ public class EnemySet : MonoBehaviour
 
 	private int _numParts;
     public UnityEvent OnDeath = new UnityEvent();
+	public bool IsAlive;
 
     private void Start()
 	{
@@ -19,6 +20,8 @@ public class EnemySet : MonoBehaviour
 		{
 			enemy.OnDeath.AddListener(OnPartDestroyed);
 		}
+
+		IsAlive = true;
 	}
 
 	private void OnPartDestroyed()
@@ -35,6 +38,7 @@ public class EnemySet : MonoBehaviour
 
 			level.ResumeScrolling();
             OnDeath.Invoke();
+			IsAlive = false;
 		}
 	}
 }

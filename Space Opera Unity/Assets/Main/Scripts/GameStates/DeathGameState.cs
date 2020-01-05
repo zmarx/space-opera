@@ -7,6 +7,6 @@ public class DeathGameState : GameState
 
 	public void OnStartButtonPressed ()
 	{
-		_gameStateManager.SwitchState ("CoreGameState");
+		_gameStateManager.SwitchState<CoreGameState>();
 	}
 }

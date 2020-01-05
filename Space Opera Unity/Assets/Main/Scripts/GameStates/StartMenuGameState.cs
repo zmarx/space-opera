@@ -8,7 +8,7 @@ public class StartMenuGameState : GameState
 
 	public void OnButtonStartPushed()
 	{
-		_gameStateManager.SwitchState("CoreGameState");
+		_gameStateManager.SwitchState<CoreGameState>();
 	}
 
 	public void Start()

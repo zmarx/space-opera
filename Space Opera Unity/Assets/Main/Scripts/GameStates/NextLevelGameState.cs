@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class NextLevelGameState : GameState
 {
-	public Level _currentLevel;
+	private float _waitTime = 3f;
 
 	public override void OnEnableGameState ()
 	{
 		Reset ();
 	}
 
-	public void Reset ()
+	public IEnumerator Reset ()
 	{
+		yield return new WaitForSeconds(_waitTime);
+		_gameStateManager.SwitchState<CoreGameState>();
 	}
 
 }

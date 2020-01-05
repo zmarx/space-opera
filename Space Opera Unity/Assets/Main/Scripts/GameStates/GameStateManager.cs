@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class GameStateManager : MonoBehaviour
+public class GameStateManager : MonoBehaviourSingleton<GameStateManager>
 {
 
 	public Dictionary<string, GameState> _gameStateDictionary;
@@ -15,13 +15,18 @@ public class GameStateManager : MonoBehaviour
 		GameState[] gameStates = GetComponentsInChildren<GameState> ();
 
 		foreach (GameState gameState in gameStates) {
-			_gameStateDictionary.Add (gameState.gameObject.name, gameState);
+			_gameStateDictionary.Add (gameState.GetType().Name, gameState);
 		}
 
 		SwitchState (_startGameState);
 	}
 
-	public void SwitchState (string stateName)
+	public void SwitchState<T>()
+	{
+		SwitchState(typeof(T).Name);
+	}
+
+	private void SwitchState (string stateName)
 	{
 		Assert.IsTrue (_gameStateDictionary.ContainsKey (stateName));
 		foreach (GameState gameState in _gameStateDictionary.Values) {
@@ -34,8 +39,5 @@ public class GameStateManager : MonoBehaviour
 		GameState activeState = _gameStateDictionary[stateName];
 		activeState.gameObject.SetActive (true);
 		activeState.OnEnableGameState ();
-
 	}
-		
-
 }
