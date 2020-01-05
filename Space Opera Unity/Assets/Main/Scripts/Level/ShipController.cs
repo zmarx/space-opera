@@ -97,6 +97,7 @@ public class ShipController : MonoBehaviour
 		}
 		else
 		{
+			AudioMan.Instance.PlaySound("PlayerCollision");
 			Player.Instance.Hp--;
             if (_valveHand.controller != null)
             {
