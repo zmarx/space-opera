@@ -51,13 +51,14 @@ public class ShipController : MonoBehaviour
 
 		Hand1.Translate(dp * Time.deltaTime);
 
-		Vector3 p = Hand1.position - _positionOffset;
+		Vector3 p = Stage.transform.InverseTransformPoint(Hand1.position);// - _positionOffset;
+		p.z += 0.5f * Stage.DeltaLane;
 		Stage.Clamp(ref p);
 
 #if UNITY_EDITOR
 		// clamp hand position for desktop testing, so we don't exceed the staging bounds
 		// otherwise joystick inputs would feel awkward to wait for the position to come in stage range again.
-		Hand1.position = p + _positionOffset;
+		//Hand1.position = p + _positionOffset;
 #endif
 
 		// set position on a defined lane
