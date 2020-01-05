@@ -95,6 +95,10 @@ public class ShipController : MonoBehaviour
 		else
 		{
 			Player.Instance.Hp--;
-		}
+            if (_valveHand.controller != null)
+            {
+                _valveHand.controller.TriggerHapticPulse(1000);
+            }
+        }
 	}
 }
