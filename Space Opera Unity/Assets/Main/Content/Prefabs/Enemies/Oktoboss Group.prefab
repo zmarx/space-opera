@@ -1873,6 +1873,11 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[2].Array.data[11].y
       value: -0.06347656
       objectReference: {fileID: 0}
+    - target: {fileID: 9165531119786665270, guid: 0152b2efb4d56c041a800b67263c43a1,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8938018263390003223, guid: 0152b2efb4d56c041a800b67263c43a1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0152b2efb4d56c041a800b67263c43a1, type: 3}
