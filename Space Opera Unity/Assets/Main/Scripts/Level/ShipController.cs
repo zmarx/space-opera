@@ -1,5 +1,7 @@
-﻿using UnityEngine;
-using ValveIA = Valve.VR.InteractionSystem;
+﻿using System;
+using System.Collections;
+using UnityEngine;
+using VRIAS = Valve.VR.InteractionSystem;
 
 public class ShipController : MonoBehaviour
 {
@@ -9,13 +11,13 @@ public class ShipController : MonoBehaviour
 	public Shot Shot;
 	public float TimeToFire = 0.1f;
 
-	private ValveIA.Hand _valveHand;
+	private VRIAS.Hand _valveHand;
 	private Vector3 _positionOffset;
 	private float _timeToFire = 0f;
 
 	public void Start()
 	{
-		_valveHand = Hand1.GetComponent<ValveIA.Hand>();
+		_valveHand = Hand1.GetComponent<VRIAS.Hand>();
 	}
 
 	// Update is called once per frame
@@ -88,6 +90,9 @@ public class ShipController : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
+        // ignore built-in layer
+        if (other.gameObject.layer < 8) { return; }
+
 		Coin coin = other.gameObject.GetComponentInChildren<Coin>();
 		if (coin != null)
 		{
@@ -99,8 +104,25 @@ public class ShipController : MonoBehaviour
 			Player.Instance.Hp--;
             if (_valveHand.controller != null)
             {
-                _valveHand.controller.TriggerHapticPulse(1000);
+                StartCoroutine(HapticFeedback(3, 0.5f, 1f));
             }
         }
 	}
+
+    private IEnumerator HapticFeedback(int repeat, float pulseOn, float pulseWidth)
+    {
+        var poff = new WaitForSecondsRealtime(pulseWidth - pulseOn);
+        float t = 0f;
+        while (repeat > 0)
+        {
+            repeat--;
+            while (t < pulseOn)
+            {
+                t += Time.unscaledDeltaTime;
+                _valveHand.controller.TriggerHapticPulse(1000);
+                yield return null;
+            }
+            yield return poff;
+        }
+    }
 }
