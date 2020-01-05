@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
+	public int HitPoints = 1;
+	public int ScoreValue = 1;
     public float DelayAnimation = 0f;
+	public UnityEvent OnDeath = new UnityEvent();
+
 	private Shootable _shootable;
 	private Animator _animator;
 
@@ -25,6 +30,7 @@ public class Enemy : MonoBehaviour
     private void OnShot()
 	{
 		_animator.SetTrigger("Die");
+		OnDeath.Invoke();
 	}
 
     private void LateUpdate()
