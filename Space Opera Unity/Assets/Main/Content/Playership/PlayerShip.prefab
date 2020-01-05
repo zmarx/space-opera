@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 4569997438672190223}
   - component: {fileID: 3853703454658500246}
   m_Layer: 8
-  m_Name: Player Ship
+  m_Name: PlayerShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
   Hand1: {fileID: 0}
   Hand2: {fileID: 0}
   Stage: {fileID: 0}
-  Shot: {fileID: 4476042482427172980, guid: 0a47936192070744f8eacb1877273069, type: 3}
+  Shot: {fileID: 4476042482427172985, guid: 0a47936192070744f8eacb1877273069, type: 3}
   TimeToFire: 0.1
 --- !u!54 &4569997438672190223
 Rigidbody:
