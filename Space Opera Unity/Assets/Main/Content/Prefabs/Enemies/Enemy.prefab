@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 9165531119786665270}
   - component: {fileID: 4043190876563125087}
   m_Layer: 9
-  m_Name: Enemy
+  m_Name: EnemyControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 7318101882936614062}
   - component: {fileID: 8938018263390003223}
   m_Layer: 9
-  m_Name: Enemy Group
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

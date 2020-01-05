@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7318101882193468600, guid: 0152b2efb4d56c041a800b67263c43a1,
         type: 3}
       propertyPath: m_Name
-      value: Sharknado
+      value: EnemyControl
       objectReference: {fileID: 0}
     - target: {fileID: 7318101882193468602, guid: 0152b2efb4d56c041a800b67263c43a1,
         type: 3}
@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 7318101882936614063, guid: 0152b2efb4d56c041a800b67263c43a1,
         type: 3}
       propertyPath: m_Name
-      value: Sharknado Group
+      value: Sharknado
       objectReference: {fileID: 0}
     - target: {fileID: 7318101883067148580, guid: 0152b2efb4d56c041a800b67263c43a1,
         type: 3}

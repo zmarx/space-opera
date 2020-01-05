@@ -67,6 +67,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  IsAlive: 0
 --- !u!114 &6981985139457653017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,16 +98,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.035
       objectReference: {fileID: 0}
-    - target: {fileID: 2931591515764080808, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Name
-      value: Oktoboss
-      objectReference: {fileID: 0}
-    - target: {fileID: 2931591515764080810, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 86fd0c99a18171044b154ef06321f4a9, type: 2}
     - target: {fileID: 2931591516631941310, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -165,7 +156,7 @@ PrefabInstance:
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_Name
-      value: Oktoboss Group (4)
+      value: Oktoboss Part (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
@@ -683,16 +674,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8155943150608872450}
     m_Modifications:
-    - target: {fileID: 2931591515764080808, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Name
-      value: Oktoboss
-      objectReference: {fileID: 0}
-    - target: {fileID: 2931591515764080810, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 86fd0c99a18171044b154ef06321f4a9, type: 2}
     - target: {fileID: 2931591516631941310, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -751,7 +732,7 @@ PrefabInstance:
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_Name
-      value: Oktoboss Group (9)
+      value: Oktoboss Part (9)
       objectReference: {fileID: 0}
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
@@ -2664,11 +2645,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Oktoboss
       objectReference: {fileID: 0}
-    - target: {fileID: 2931591515764080810, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 86fd0c99a18171044b154ef06321f4a9, type: 2}
     - target: {fileID: 2931591516631941310, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2727,7 +2703,7 @@ PrefabInstance:
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_Name
-      value: Oktoboss Group (6)
+      value: Oktoboss Part (6)
       objectReference: {fileID: 0}
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
@@ -4320,16 +4296,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8155943150608872450}
     m_Modifications:
-    - target: {fileID: 2931591515764080808, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Name
-      value: Oktoboss
-      objectReference: {fileID: 0}
-    - target: {fileID: 2931591515764080810, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 86fd0c99a18171044b154ef06321f4a9, type: 2}
     - target: {fileID: 2931591516631941310, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4388,7 +4354,7 @@ PrefabInstance:
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_Name
-      value: Oktoboss Group (5)
+      value: Oktoboss Part (5)
       objectReference: {fileID: 0}
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
@@ -5496,16 +5462,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8155943150608872450}
     m_Modifications:
-    - target: {fileID: 2931591515764080808, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Name
-      value: Oktoboss
-      objectReference: {fileID: 0}
-    - target: {fileID: 2931591515764080810, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 86fd0c99a18171044b154ef06321f4a9, type: 2}
     - target: {fileID: 2931591516631941310, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5564,7 +5520,7 @@ PrefabInstance:
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_Name
-      value: Oktoboss Group (2)
+      value: Oktoboss Part (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
@@ -6867,16 +6823,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.007
       objectReference: {fileID: 0}
-    - target: {fileID: 2931591515764080808, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Name
-      value: Oktoboss
-      objectReference: {fileID: 0}
-    - target: {fileID: 2931591515764080810, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 86fd0c99a18171044b154ef06321f4a9, type: 2}
     - target: {fileID: 2931591516631941310, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6935,7 +6881,7 @@ PrefabInstance:
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_Name
-      value: Oktoboss Group (8)
+      value: Oktoboss Part (8)
       objectReference: {fileID: 0}
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
@@ -7618,16 +7564,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8155943150608872450}
     m_Modifications:
-    - target: {fileID: 2931591515764080808, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Name
-      value: Oktoboss
-      objectReference: {fileID: 0}
-    - target: {fileID: 2931591515764080810, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 86fd0c99a18171044b154ef06321f4a9, type: 2}
     - target: {fileID: 2931591516631941310, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7686,12 +7622,7 @@ PrefabInstance:
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_Name
-      value: Oktoboss Group (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: Oktoboss Part (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac, type: 3}
@@ -7713,16 +7644,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.939
       objectReference: {fileID: 0}
-    - target: {fileID: 2931591515764080808, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Name
-      value: Oktoboss
-      objectReference: {fileID: 0}
-    - target: {fileID: 2931591515764080810, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 86fd0c99a18171044b154ef06321f4a9, type: 2}
     - target: {fileID: 2931591516631941310, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7781,7 +7702,7 @@ PrefabInstance:
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}
       propertyPath: m_Name
-      value: Oktoboss Group (3)
+      value: Oktoboss Part (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2931591516631941311, guid: 31f0ed98e55ad1e4c9c202d3b3ab22ac,
         type: 3}

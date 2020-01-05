@@ -14,13 +14,18 @@ public class Player : MonoBehaviourSingleton<Player>
 		}
 		set
 		{
-			_playerHp = value;
+            if (_playerHp - value > 0)
+            {
+                OnPlayerHit.Invoke();
+            }
+            _playerHp = value;
 			OnPlayerHpChanged.Invoke();
 		}
 	}
-	public UnityEvent OnPlayerHpChanged = new UnityEvent();
+    public UnityEvent OnPlayerHpChanged = new UnityEvent();
+    public UnityEvent OnPlayerHit = new UnityEvent();
 
-	private int _playerScore = 0;
+    private int _playerScore = 0;
 	public int Score
 	{
 		get

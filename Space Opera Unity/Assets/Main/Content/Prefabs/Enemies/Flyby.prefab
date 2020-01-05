@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 7318101882936614063, guid: 0152b2efb4d56c041a800b67263c43a1,
         type: 3}
       propertyPath: m_Name
-      value: Enemy Group
+      value: Flyby
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0152b2efb4d56c041a800b67263c43a1, type: 3}
