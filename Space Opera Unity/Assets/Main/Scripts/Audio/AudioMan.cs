@@ -13,7 +13,6 @@ public class AudioMan : MonoBehaviourSingleton<AudioMan>
 		public AudioClip AudioClip;
 	}
 
-
 	public Sound[] Sounds;
 	private Dictionary<string, AudioClip> _soundDict = new Dictionary<string, AudioClip>();
 	private AudioSource _audioSource;
