@@ -5,10 +5,11 @@ using UnityEngine.Events;
 
 public class Shootable : MonoBehaviour
 {
-	public UnityEvent _onShot = new UnityEvent();
+    public class UnityEventCollider : UnityEvent<Collider> { }
+    public UnityEventCollider _onShot = new UnityEventCollider();
 
-	public void GetShot()
+	public void GetShot(Collider collider)
 	{
-		_onShot.Invoke();
+		_onShot.Invoke(collider);
 	}
 }
