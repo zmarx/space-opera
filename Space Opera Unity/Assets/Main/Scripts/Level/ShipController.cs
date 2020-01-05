@@ -14,14 +14,10 @@ public class ShipController : MonoBehaviour
 	private VRIAS.Hand _valveHand;
 	private Vector3 _positionOffset;
 	private float _timeToFire = 0f;
-	private Shootable _shootable;
 
 	public void Start()
 	{
 		_valveHand = Hand1.GetComponent<VRIAS.Hand>();
-
-		_shootable = GetComponent<Shootable>();
-		_shootable._onShot.AddListener(OnShot);
 	}
 
 	// Update is called once per frame
@@ -92,26 +88,26 @@ public class ShipController : MonoBehaviour
 		_positionOffset.z += 0.5f * (Stage.Max.z - Stage.Min.z);
 	}
 
-	private void OnShot(Collider collider)
-	{
+    private void OnTriggerEnter(Collider other)
+    {
         // ignore built-in layer
-        if (collider.gameObject.layer < 8) { return; }
+        if (other.gameObject.layer < 8) { return; }
 
-		Coin coin = collider.gameObject.GetComponentInChildren<Coin>();
-		if (coin != null)
-		{
-			coin.Collect();
-		}
-		else
-		{
-			AudioMan.Instance.PlaySound("PlayerCollision");
-			Player.Instance.Hp--;
+        Coin coin = other.gameObject.GetComponentInChildren<Coin>();
+        if (coin != null)
+        {
+            coin.Collect();
+        }
+        else
+        {
+            AudioMan.Instance.PlaySound("PlayerCollision");
+            Player.Instance.Hp--;
             if (_valveHand.controller != null)
             {
                 StartCoroutine(HapticFeedback(4, 0.9f, 1f));
             }
         }
-	}
+    }
 
     private IEnumerator HapticFeedback(int repeat, float pulseOn, float pulseWidth)
     {

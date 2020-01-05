@@ -256,7 +256,6 @@ GameObject:
   - component: {fileID: 4569997438672190216}
   - component: {fileID: 4569997438672190222}
   - component: {fileID: 4569997438672190217}
-  - component: {fileID: 7922453362055723548}
   - component: {fileID: 4569997438672190223}
   - component: {fileID: 3853703454658500246}
   - component: {fileID: 4899267505050081019}
@@ -332,21 +331,6 @@ MonoBehaviour:
   Stage: {fileID: 0}
   Shot: {fileID: 4476042482427172985, guid: 0a47936192070744f8eacb1877273069, type: 3}
   TimeToFire: 0.1
---- !u!114 &7922453362055723548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4569997438672190219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c68930d013bbd6e49a7194ec3f2b0043, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onShot:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!54 &4569997438672190223
 Rigidbody:
   m_ObjectHideFlags: 0
