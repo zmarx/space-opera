@@ -480,6 +480,8 @@ MonoBehaviour:
   Min: {x: -1, y: 0.125, z: -0.2}
   Max: {x: 1, y: 1, z: 0.2}
   DeltaLane: 0.2
+  ShowOnStart:
+  - {fileID: 202440304}
 --- !u!65 &163078579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -508,7 +510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &202440305
 Transform:
   m_ObjectHideFlags: 0

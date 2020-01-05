@@ -7,12 +7,17 @@ public class Stage : MonoBehaviour
     public Vector3 Min;
     public Vector3 Max;
     public float DeltaLane;
+    public GameObject [] ShowOnStart;
 
     private static float StaticDeltaLane;
 
     private void Start()
     {
         StaticDeltaLane = DeltaLane;
+        foreach (var go in ShowOnStart)
+        {
+            go.SetActive(true);
+        }
     }
 
     public void Clamp(ref Vector3 position)
