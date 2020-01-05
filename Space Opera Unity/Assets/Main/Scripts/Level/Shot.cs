@@ -22,7 +22,10 @@ public class Shot : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		// destroy shot if it hits an obstacle
-		Destroy(gameObject);
+		if (other.GetComponent<Coin>() == null)
+		{
+			Destroy(gameObject);
+		}
 
 		// if shot hits a object within the layer mask destroy the object
 		if (((1 << other.gameObject.layer) & LayerDestroy) != 0)
