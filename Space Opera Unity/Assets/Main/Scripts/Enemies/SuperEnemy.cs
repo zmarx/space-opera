@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SuperEnemy : MonoBehaviour
 {
+	public int HitPoints = 5;
+
 	private int _numParts;
 
 	private void Start()
@@ -26,6 +28,8 @@ public class SuperEnemy : MonoBehaviour
 			// SuperEnemy is dead
 			var level = transform.root.GetComponent<Level>();
 			Debug.Assert(level, "root component has no level script attached!");
+
+			Player.Instance.Score += HitPoints;
 
 			level.ResumeScrolling();
 		}
