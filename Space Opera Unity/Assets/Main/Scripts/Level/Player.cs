@@ -17,6 +17,7 @@ public class Player : MonoBehaviourSingleton<Player>
             if (_playerHp - value > 0)
             {
                 OnPlayerHit.Invoke();
+				AudioMan.Instance.PlaySound("PlayerLostLife");
             }
             _playerHp = value;
 			OnPlayerHpChanged.Invoke();

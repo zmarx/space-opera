@@ -12,6 +12,7 @@ public class AudioMan : MonoBehaviourSingleton<AudioMan>
 		public string Name;
 		public AudioClip AudioClip;
 		public float PitchVariation;
+		public AudioClip[] AudioClips;
 	}
 
 	public Sound[] Sounds;
@@ -32,6 +33,12 @@ public class AudioMan : MonoBehaviourSingleton<AudioMan>
 	{
 		Sound sound = _soundDict[name];
 		_audioSource.pitch = Random.Range(1 - sound.PitchVariation, 1 + sound.PitchVariation);
-		_audioSource.PlayOneShot(sound.AudioClip);
+
+		AudioClip clip = sound.AudioClip;
+		if (sound.AudioClip!=null && sound.AudioClips.Length>0)
+		{
+			clip = sound.AudioClips[Random.Range(0, sound.AudioClips.Length - 1)];
+		}
+		_audioSource.PlayOneShot(clip);
 	}
 }

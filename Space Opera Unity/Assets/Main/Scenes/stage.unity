@@ -806,6 +806,9 @@ MonoBehaviour:
   - Name: BossDead
     AudioClip: {fileID: 8300000, guid: 9d2532af0b3ddd74587cfc7a99ea5318, type: 3}
     PitchVariation: 0
+  - Name: PlayerLostLife
+    AudioClip: {fileID: 8300000, guid: 13683709df271c548872be7c52bd6661, type: 3}
+    PitchVariation: 0
 --- !u!82 &448503566
 AudioSource:
   m_ObjectHideFlags: 0
