@@ -5,11 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class CoreGameState : GameState
 {
-	public static string[] LevelScenes = new string[]
-	{
-		"level1",
-		"level2"
-	};
 
 	public override void OnEnableGameState ()
 	{
@@ -18,7 +13,7 @@ public class CoreGameState : GameState
 
 	public void Reset ()
 	{
-		SceneManager.LoadScene(LevelScenes[0], LoadSceneMode.Additive);
+		SceneManager.LoadScene(Progress.Instance.LevelScenes[0], LoadSceneMode.Additive);
 	}
 
 	public void OnLevelDone ()

@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
 	private Animator _animator;
     private bool _isAlive;
 
+
 	void Start()
 	{
 		_shootable = GetComponent<Shootable>();

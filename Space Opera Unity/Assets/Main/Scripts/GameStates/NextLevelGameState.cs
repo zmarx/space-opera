@@ -15,12 +15,4 @@ public class NextLevelGameState : GameState
 	{
 	}
 
-	public void OnLevelDone() {
-		Reset ();
-	}
-
-	public void OnPlayerDead() {
-		_gameStateManager.SwitchState ("DeathGameState");
-	}
-
 }

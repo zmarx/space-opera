@@ -11,9 +11,9 @@ public class StartMenuGameState : GameState
 		_gameStateManager.SwitchState("CoreGameState");
 	}
 
-	private void Start()
+	public void Start()
 	{
-		foreach (string level in CoreGameState.LevelScenes)
+		foreach (string level in Progress.Instance.LevelScenes)
 		{
 			Scene loadedLevel = SceneManager.GetSceneByName(level);
 
