@@ -11,6 +11,7 @@ public class PlayerScoreView : MonoBehaviour
 	{
 		_label = GetComponentInChildren<Text>();
 		Player.Instance.OnScoreChanged.AddListener(UpdateView);
+		UpdateView();
 	}
 
 	private void UpdateView()

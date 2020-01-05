@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class PlayerHitpointView : MonoBehaviour
 {
@@ -11,11 +11,12 @@ public class PlayerHitpointView : MonoBehaviour
 	{
 		_label = GetComponentInChildren<Text>();
 		Player.Instance.OnPlayerHpChanged.AddListener(UpdateView);
+		UpdateView();
 	}
 
 	private void UpdateView()
 	{
-		_label.text = Player.Instance.Hp.ToString();
+		_label.text = "Lifes:" + Player.Instance.Hp.ToString();
 	}
 
 }

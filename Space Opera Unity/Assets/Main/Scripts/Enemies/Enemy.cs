@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
 
 	private Shootable _shootable;
 	private Animator _animator;
+	private bool _isAlive;
 
 	void Start()
 	{
@@ -20,6 +21,8 @@ public class Enemy : MonoBehaviour
 		_animator = GetComponent<Animator>();
 		_animator.enabled = false;
 		Invoke("DelayAnimationCR", DelayAnimation);
+
+		_isAlive = true;
 	}
 
 	private void DelayAnimationCR()
@@ -29,6 +32,9 @@ public class Enemy : MonoBehaviour
 
 	private void OnShot()
 	{
+		if (!_isAlive) return;
+
+		_isAlive = false;
 		_animator.SetTrigger("Die");
 		OnDeath.Invoke();
 		Player.Instance.Score += HitPoints;
