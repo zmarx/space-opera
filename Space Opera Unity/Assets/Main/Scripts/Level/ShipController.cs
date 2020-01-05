@@ -6,7 +6,7 @@ public class ShipController : MonoBehaviour
 	public Transform Hand1;
 	public Transform Hand2;
 	public Stage Stage;
-	public GameObject Shot;
+	public Shot Shot;
 	public float TimeToFire = 0.1f;
 
 	private ValveIA.Hand _valveHand;
@@ -72,9 +72,9 @@ public class ShipController : MonoBehaviour
 		if (_timeToFire <= 0f)
 		{
 			_timeToFire = TimeToFire;
-			GameObject shot = Instantiate(Shot);
+			Shot shot = Instantiate(Shot);
 			shot.transform.position = transform.position + Shot.transform.localPosition;
-			shot.SetActive(true);
+			shot.gameObject.SetActive(true);
 		}
 	}
 

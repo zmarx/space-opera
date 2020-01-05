@@ -174,8 +174,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  Shot: {fileID: 4476042482427172985, guid: fcf12e7a01c373e40887ab48ef4a46f2, type: 3}
+  ShootDirection: {x: -1, y: 0, z: 0}
+  ShootRangeUpDown: 0
+  ShootRangeLeftRight: 0
+  ShootProbability: 0.2
+  ShootTimeToFire: 5
+  AimingAtPlayer: 0
 --- !u!114 &4043190876563125087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,8 +196,6 @@ MonoBehaviour:
   _onShot:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &7318101882936614063
 GameObject:
   m_ObjectHideFlags: 0

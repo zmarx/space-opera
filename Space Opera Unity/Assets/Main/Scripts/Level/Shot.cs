@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour
 {
-	public float Speed;
+	public Vector3 Speed;
 	public float TimeToLive;
 	public LayerMask LayerDestroy;
 
 	void Update()
 	{
 		TimeToLive -= Time.deltaTime;
-		transform.Translate(Speed * Time.deltaTime, 0, 0);
+		transform.Translate(Speed * Time.deltaTime);
 
 		if (TimeToLive < 0f)
 		{
