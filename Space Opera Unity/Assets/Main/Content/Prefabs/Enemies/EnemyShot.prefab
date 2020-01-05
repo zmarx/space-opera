@@ -63,7 +63,7 @@ MonoBehaviour:
   TimeToLive: 5
   LayerDestroy:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
 --- !u!54 &4476042482427172990
 Rigidbody:
   m_ObjectHideFlags: 0
