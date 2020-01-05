@@ -11,17 +11,18 @@ public class AudioMan : MonoBehaviourSingleton<AudioMan>
 	{
 		public string Name;
 		public AudioClip AudioClip;
+		public float PitchVariation;
 	}
 
 	public Sound[] Sounds;
-	private Dictionary<string, AudioClip> _soundDict = new Dictionary<string, AudioClip>();
+	private Dictionary<string, Sound> _soundDict = new Dictionary<string, Sound>();
 	private AudioSource _audioSource;
 
 	private void Start()
 	{
 		foreach (Sound sound in Sounds)
 		{
-			_soundDict.Add(sound.Name, sound.AudioClip);
+			_soundDict.Add(sound.Name, sound);
 		}
 
 		_audioSource = GetComponent<AudioSource>();
@@ -29,7 +30,8 @@ public class AudioMan : MonoBehaviourSingleton<AudioMan>
 
 	public void PlaySound(string name)
 	{
-		_audioSource.PlayOneShot(_soundDict[name]);
-
+		Sound sound = _soundDict[name];
+		_audioSource.pitch = Random.Range(1 - sound.PitchVariation, 1 + sound.PitchVariation);
+		_audioSource.PlayOneShot(sound.AudioClip);
 	}
 }

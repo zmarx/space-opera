@@ -790,16 +790,22 @@ MonoBehaviour:
   Sounds:
   - Name: PlayerShot
     AudioClip: {fileID: 8300000, guid: 5d79fdda3826e92488de75747d470af6, type: 3}
+    PitchVariation: 0.3
   - Name: CoinCollect
     AudioClip: {fileID: 8300000, guid: a28ae2fbd4bf18141960259d2377a819, type: 3}
+    PitchVariation: 0
   - Name: EnemyDeath
     AudioClip: {fileID: 8300000, guid: 9c6e79b8e73e26e43b2034c9dcf46803, type: 3}
+    PitchVariation: 0.3
   - Name: PlayerCollision
     AudioClip: {fileID: 8300000, guid: e1a29f45ae6741240a314c5210a2bdc7, type: 3}
+    PitchVariation: 0
   - Name: EnemyHit
     AudioClip: {fileID: 8300000, guid: e1a29f45ae6741240a314c5210a2bdc7, type: 3}
+    PitchVariation: 0
   - Name: BossDead
     AudioClip: {fileID: 8300000, guid: 9d2532af0b3ddd74587cfc7a99ea5318, type: 3}
+    PitchVariation: 0
 --- !u!82 &448503566
 AudioSource:
   m_ObjectHideFlags: 0
