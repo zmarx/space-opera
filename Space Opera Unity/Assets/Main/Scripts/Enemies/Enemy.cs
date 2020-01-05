@@ -59,6 +59,8 @@ public class Enemy : MonoBehaviour
 	private void OnShot()
 	{
 		if (!_isAlive) return;
+		AudioMan.Instance.PlaySound("EnemyHit");
+
 
 		HitPoints--;
 		if (HitPoints == 0)

@@ -39,6 +39,7 @@ public class EnemySet : MonoBehaviour
 			level.ResumeScrolling();
             OnDeath.Invoke();
 			IsAlive = false;
+			AudioMan.Instance.PlaySound("BossDead");
 		}
 	}
 }
