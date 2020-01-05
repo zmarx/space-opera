@@ -104,7 +104,7 @@ public class ShipController : MonoBehaviour
 			Player.Instance.Hp--;
             if (_valveHand.controller != null)
             {
-                StartCoroutine(HapticFeedback(3, 0.5f, 1f));
+                StartCoroutine(HapticFeedback(4, 0.9f, 1f));
             }
         }
 	}
