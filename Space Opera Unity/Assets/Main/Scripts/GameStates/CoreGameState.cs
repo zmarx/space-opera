@@ -6,24 +6,24 @@ using UnityEngine.SceneManagement;
 public class CoreGameState : GameState
 {
 
-	public override void OnEnableGameState ()
+	public override void OnEnableGameState()
 	{
-		Reset ();
+		Reset();
 	}
 
-	public void Reset ()
+	public void Reset()
 	{
 		SceneManager.LoadScene(Progress.Instance.LevelScenes[0], LoadSceneMode.Additive);
 	}
 
-	public void OnLevelDone ()
+	public void OnLevelDone()
 	{
-		Reset ();
+		Reset();
 	}
 
-	public void OnPlayerDead ()
+	public void OnPlayerDead()
 	{
-		_gameStateManager.SwitchState ("DeathGameState");
+		_gameStateManager.SwitchState<DeathGameState>();
 	}
 
 }
