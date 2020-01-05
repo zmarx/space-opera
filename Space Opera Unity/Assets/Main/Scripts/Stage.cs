@@ -9,7 +9,7 @@ public class Stage : MonoBehaviour
     public float DeltaLane;
     public GameObject [] ShowOnStart;
 
-    private static float StaticDeltaLane;
+    public static float StaticDeltaLane { get; private set; }
 
     private void Start()
     {
