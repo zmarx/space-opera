@@ -5,14 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class CoreGameState : GameState
 {
+	private void Start()
+	{
+		Debug.Log("lsdjf");
+	}
 
 	public override void OnEnableGameState()
 	{
-		Reset();
+		StartCoroutine(Reset());
 	}
 
-	public void Reset()
+	public IEnumerator Reset()
 	{
+		foreach (string level in Progress.Instance.LevelScenes)
+		{
+			Scene loadedLevel = SceneManager.GetSceneByName(level);
+			if (loadedLevel.isLoaded)
+			{
+				AsyncOperation async = SceneManager.UnloadSceneAsync(loadedLevel, UnloadSceneOptions.None);
+
+				while (!async.isDone)
+				{
+					yield return null;
+				}
+			}
+		}
+
 		SceneManager.LoadScene(Progress.Instance.LevelScenes[0], LoadSceneMode.Additive);
 	}
 
