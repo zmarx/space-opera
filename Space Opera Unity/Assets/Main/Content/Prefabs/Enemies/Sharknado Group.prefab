@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sharknado
       objectReference: {fileID: 0}
+    - target: {fileID: 7318101882193468602, guid: 0152b2efb4d56c041a800b67263c43a1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e352b13cc3c8a0c46b6ed350841a9131, type: 2}
     - target: {fileID: 7318101882193468605, guid: 0152b2efb4d56c041a800b67263c43a1,
         type: 3}
       propertyPath: m_Size.x

@@ -43,7 +43,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 619a8e28c28b27d488333a7a21f696e0, type: 2}
+  m_Motion: {fileID: 7400000, guid: 0d1148d2bc17b9a41ab566b84d5e2854, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -83,7 +83,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enemy_1_AnimationController
+  m_Name: mac_sharknado
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Die
@@ -91,7 +91,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -125,7 +125,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 0c25d9e229d821f49b9385dcfb4dacf1, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3ce1f601e387e114bb8cb2a1a6aaa5d1, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -177,7 +177,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: abb2703b2e4cdb14ea9535ab482b79be, type: 2}
+  m_Motion: {fileID: 7400000, guid: 82e503a56b07964418b5c18847abe379, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
