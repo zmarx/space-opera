@@ -35,7 +35,7 @@ public class AudioMan : MonoBehaviourSingleton<AudioMan>
 		_audioSource.pitch = Random.Range(1 - sound.PitchVariation, 1 + sound.PitchVariation);
 
 		AudioClip clip = sound.AudioClip;
-		if (sound.AudioClip!=null && sound.AudioClips.Length>0)
+		if (sound.AudioClips != null && sound.AudioClips.Length > 0)
 		{
 			clip = sound.AudioClips[Random.Range(0, sound.AudioClips.Length - 1)];
 		}
