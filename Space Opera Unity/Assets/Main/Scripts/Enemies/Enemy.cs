@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Enemy : MonoBehaviour
 {
 	public int HitPoints = 1;
-	public int ScoreValue = 1;
+	public int ScoreValue = 10;
 	public UnityEvent OnDeath = new UnityEvent();
 
     [Header("Shooting abilities")]
@@ -31,7 +31,6 @@ public class Enemy : MonoBehaviour
 	private Animator _animator;
     private bool _isAlive;
     private float _timeToFire = 0f;
-
 
 	void Start()
 	{

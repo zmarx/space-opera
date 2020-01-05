@@ -87,6 +87,14 @@ public class ShipController : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Player.Instance.Hp--;
+		Coin coin = other.gameObject.GetComponentInChildren<Coin>();
+		if (coin != null)
+		{
+			coin.Collect();
+		}
+		else
+		{
+			Player.Instance.Hp--;
+		}
 	}
 }

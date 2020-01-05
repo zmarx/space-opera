@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class EnemySet : MonoBehaviour
 {
-	public int HitPoints = 5;
+	public int HitPoints = 100;
 
 	private int _numParts;
     public UnityEvent OnDeath = new UnityEvent();
