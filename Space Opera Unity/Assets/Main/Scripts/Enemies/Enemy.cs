@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 
 	private Shootable _shootable;
 	private Animator _animator;
-	private bool _isAlive;
+    private bool _isAlive;
 
 	void Start()
 	{
@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
 		_shootable._onShot.AddListener(OnShot);
 
 		_animator = GetComponent<Animator>();
+        _isAlive = true;
 	}
 
 	private void OnShot()

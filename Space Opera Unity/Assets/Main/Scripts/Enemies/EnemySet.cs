@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class SuperEnemy : MonoBehaviour
+public class EnemySet : MonoBehaviour
 {
 	public int HitPoints = 5;
 
 	private int _numParts;
+    public UnityEvent OnDeath = new UnityEvent();
 
-	private void Start()
+    private void Start()
 	{
 		Enemy[] childEnemies = GetComponentsInChildren<Enemy>();
 		_numParts = childEnemies.Length;
@@ -32,6 +34,7 @@ public class SuperEnemy : MonoBehaviour
 			Player.Instance.Score += HitPoints;
 
 			level.ResumeScrolling();
+            OnDeath.Invoke();
 		}
 	}
 }
