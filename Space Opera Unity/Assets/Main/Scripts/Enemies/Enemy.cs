@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     [Tooltip("0 - exactly in direction, 1 - 360° up/down")]
     [Range(0f, 1f)]
     public float ShootRangeLeftRight = 0f;
-    [Tooltip("0 - never shoots, 1 - shoots always")]
+    [Tooltip("0 - rarely shoots, 1 - shoots always")]
     [Range(0f, 1f)]
     public float ShootProbability = 0f;
     [Tooltip("seconds before next shot will be fired (when probability is set to 100%")]
@@ -39,10 +39,24 @@ public class Enemy : MonoBehaviour
 
 		_animator = GetComponent<Animator>();
         _isAlive = true;
-        _timeToFire = ShootTimeToFire;
+        ResetTimeToFire();
+        _timeToFire += UnityEngine.Random.Range(0f, ShootTimeToFire);
     }
 
-	private void OnShot()
+    private void ResetTimeToFire()
+    {
+        float p = Mathf.Clamp01(1f - ShootProbability);
+        float r = UnityEngine.Random.Range(0f, p);
+        _timeToFire = ShootTimeToFire;
+        while (Mathf.Abs(p) > Mathf.Epsilon)
+        {
+            _timeToFire = r * _timeToFire + ShootTimeToFire;
+            r = UnityEngine.Random.Range(0f, p);
+            p = 0.5f * p;
+        }
+    }
+
+    private void OnShot()
 	{
 		if (!_isAlive) return;
 
@@ -55,21 +69,19 @@ public class Enemy : MonoBehaviour
 
 	private void LateUpdate()
 	{
-        if (_timeToFire > 0f) { _timeToFire -= Time.deltaTime; } else { ReadyToShoot(); }
+        if (_timeToFire > 0f)
+        {
+            _timeToFire -= Time.deltaTime;
+        }
+        else
+        {
+            FireShot();
+        }
 
-		Vector3 p = transform.localPosition;
+        Vector3 p = transform.localPosition;
 		p.z = Stage.CropToLane(p.z);
 		transform.localPosition = p;
 	}
-
-    private void ReadyToShoot()
-    {
-        if (UnityEngine.Random.Range(0f, 1f) >= ShootProbability)
-        {
-            _timeToFire = ShootTimeToFire;
-            FireShot();
-        }
-    }
 
     private void FireShot()
     {
@@ -80,5 +92,7 @@ public class Enemy : MonoBehaviour
         shot.Speed = ShootDirection;
         shot.transform.position = transform.position + Shot.transform.localPosition;
         shot.gameObject.SetActive(true);
+
+        ResetTimeToFire();
     }
 }
