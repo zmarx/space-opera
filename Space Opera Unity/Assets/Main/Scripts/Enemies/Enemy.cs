@@ -5,13 +5,12 @@ using UnityEngine.Events;
 public class Enemy : MonoBehaviour
 {
 	public int HitPoints = 1;
-	public int ScoreValue = 1;
+	public int ScoreValue = 10;
 	public UnityEvent OnDeath = new UnityEvent();
 
 	private Shootable _shootable;
 	private Animator _animator;
     private bool _isAlive;
-
 
 	void Start()
 	{
