@@ -32,6 +32,8 @@ public class CoreGameState : GameState
 		}
 
 		SceneManager.LoadScene(Progress.Instance.LevelScenes[0], LoadSceneMode.Additive);
+
+		MusicMan.Instance.PlayMusic("LevelMusic");
 	}
 
 	public void OnLevelDone()
