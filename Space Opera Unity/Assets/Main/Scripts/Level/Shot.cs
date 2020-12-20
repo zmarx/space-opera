@@ -33,7 +33,7 @@ public class Shot : MonoBehaviour
 			Shootable shootable = other.GetComponent<Shootable>();
 			if (shootable != null)
 			{
-				shootable.GetShot(other);
+				shootable.GetShot();
 			}
 		}
 	}
